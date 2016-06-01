@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <target depends="createJar, signJar" name="deployJar"/>
+    <target name="createJar">
+        <jar basedir="/Users/thorsten/cidsDistribution/lib/localWuNDa/src/plain/res" destfile="/Users/thorsten/cidsDistribution/lib/localWuNDa/res.jar" manifest="/Users/thorsten/cidsDistribution/lib/cidsLibBase/resource/default.mf"/>
+    </target>
+    <target name="signJar">
+        <signjar alias="cismet" jar="/Users/thorsten/cidsDistribution/lib/localWuNDa/res.jar" keystore="/Users/thorsten/cismet_ks" storepass="${jar.sign.storepass}"/>
+    </target>
+</project>

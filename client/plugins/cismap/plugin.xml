@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<plugin xmlns="http://www.enviromatics.net/sirius/navigator/plugins" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.enviromatics.net/sirius/navigator/plugins 
+    http://geoportal.wuppertal.de/cidsDistributionInternet/client/plugins/plugin.xsd" 
+    id="cismap" >
+
+    <metainfo 
+        name="CISMAP" 
+        version="0.8"
+        copyright="GPL"
+        company="cismet GmbH" 
+        homepage="http://www.cismet.de" 
+        author="Thorsten Hell" 
+        contact="thorsten.hell@cismet.de">
+        <description>
+        </description>
+    </metainfo>
+    
+    <properties>
+        <capabilities>
+            <progressobservable>true</progressobservable>
+            <propertyobservable>false</propertyobservable> 
+            <internationalized>false</internationalized> 
+            <unloadable>true</unloadable>
+            <deactivateable>true</deactivateable> 
+        </capabilities>
+    </properties>
+    
+    <deployment>
+        <pluginclass>de.cismet.cismap.navigatorplugin.CismapPlugin</pluginclass>
+    </deployment>
+    
+   
+    <ui>
+        <widgets>
+            <widget>
+                <component>
+                    <id>cismap</id>
+                    <name>cismap</name>
+                    <tooltip>a</tooltip>
+                    <icon>images/cismap.png</icon>
+                    <position>P3</position>
+                    <preferredindex>0</preferredindex>
+                    <componentevents>false</componentevents>
+                </component>
+                <container>
+                    <floatingframe>
+                        <menubaravailable>true</menubaravailable>
+                        <swapmenubar>true</swapmenubar>
+                        <disablemenubar>false</disablemenubar>
+                        <toolbaravailable>false</toolbaravailable>
+                        <swaptoolbar>true</swaptoolbar>
+                        <disabletoolbar>true</disabletoolbar>
+                        <floatingevents>false</floatingevents>
+                    </floatingframe>
+                </container>
+            </widget>
+        </widgets>
+        
+       
+    </ui>
+</plugin>
